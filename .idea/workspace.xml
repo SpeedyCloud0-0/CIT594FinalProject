@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fe9b7981-40de-4dbc-b1e8-dec0a5ed6d2c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Kotlin Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1lMR5Mlo4oN1yaz1bKiMvMxobea" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HW11" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fe9b7981-40de-4dbc-b1e8-dec0a5ed6d2c" name="Default Changelist" comment="" />
+      <created>1607404789822</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607404789822</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="830" y="263" key="#com.intellij.ide.util.MemberChooser" timestamp="1607846698593">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="830" y="263" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1112/-1920.138.1920.1080@0.0.2048.1112" timestamp="1607846698593" />
+    <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1607843278898">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112/-1920.138.1920.1080@0.0.2048.1112" timestamp="1607843278898" />
+    <state x="695" y="261" key="NewModule_or_Project.wizard" timestamp="1607843300910">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="695" y="261" key="NewModule_or_Project.wizard/0.0.2048.1112/-1920.138.1920.1080@0.0.2048.1112" timestamp="1607843300910" />
+  </component>
+</project>
