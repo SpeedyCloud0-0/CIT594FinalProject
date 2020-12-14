@@ -32,9 +32,9 @@ public class JParser {
 	 * 
 	 * @return all parking violation content from input json file
 	 */
-	public ArrayList<Violation> open(){
+	public ArrayList<Object> open(){
 		ArrayList<HashMap> jsonMap = new ArrayList<>();
-		ArrayList<Violation> violationList = new ArrayList<>();
+		ArrayList<Object> violationList = new ArrayList<>();
 		
 		JSONParser parser = new JSONParser();
 	

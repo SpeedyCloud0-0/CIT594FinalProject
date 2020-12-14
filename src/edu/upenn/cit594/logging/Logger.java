@@ -1,4 +1,6 @@
 package edu.upenn.cit594.logging;
+import edu.upenn.cit594.Main;
+
 import java.io.File;
 import java.io.PrintWriter;
 
@@ -13,7 +15,7 @@ public class Logger {
         }
     }
 
-    private static Logger instance = new Logger("log.txt");
+    private static Logger instance = new Logger(Main.logFileName);
 
     public static Logger getInstance(){
         return instance;

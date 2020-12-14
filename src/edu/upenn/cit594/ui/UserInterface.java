@@ -22,14 +22,10 @@ public class UserInterface {
     public void writeToConsole(Map<String, Double> map){
         map.forEach((key, value) -> {
             //truncate the result
-            DecimalFormat df = new DecimalFormat("#.0000");
+            DecimalFormat df = new DecimalFormat("#0.0000");
             df.setRoundingMode(RoundingMode.FLOOR);
             System.out.println(String.format("%s %s", key, df.format(value)));
         });
-    }
-
-    public void writeToLog(){
-
     }
 
 }

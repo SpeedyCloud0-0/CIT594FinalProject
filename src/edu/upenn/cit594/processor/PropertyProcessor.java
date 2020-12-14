@@ -28,16 +28,27 @@ public class PropertyProcessor {
     }
 
     //4. Average Total Livable Area
-    public int getAveArea( String zip){
+    public int getAveArea(String zip){
         AveAreaCalculator aveCalculator = new AveAreaCalculator();
         return aveCalculator.getAverage(properties, zip);
 
     }
 
     //5. Total Residential market Value Per Capita
-    public Map<String, Double> getValuePerCapita(){
-        ValuePerCapitaCalculator perCapitaCalculator = new ValuePerCapitaCalculator();
-        return perCapitaCalculator.getValuePerCapita(properties, populations);
+    public int getValuePerCapita(String zip){
+        Property tempP;
+        double totalValue = 0;
+        int valuePerCapita = 0;
+        for (int i = 0; i < properties.size(); i++) {
+            tempP = (Property)properties.get(i);
+            if (tempP.getZipCode().compareTo(zip) == 0) {
+                totalValue += tempP.getMV();
+            }
+        }
+        if (populations.containsKey(zip)){
+            valuePerCapita = (int) totalValue / populations.get(zip);
+        }
+        return valuePerCapita;
 
     }
 
