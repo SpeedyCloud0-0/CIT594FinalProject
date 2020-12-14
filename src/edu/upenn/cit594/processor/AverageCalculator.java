@@ -6,6 +6,6 @@ import java.util.ArrayList;
 
 public interface AverageCalculator {
 
-    public int GetAveValue(ArrayList<Object> properties, String zip);
+    public int getAverage(ArrayList<Object> properties, String zip);
 
 }

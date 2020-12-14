@@ -3,13 +3,15 @@ package edu.upenn.cit594.processor;
 import edu.upenn.cit594.data.Property;
 import edu.upenn.cit594.data.Violation;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class ValuePerCapitaCalculator implements PerCapitaCalculator{
 
-    public Map<String, Double> GetValuePerCapita(ArrayList<Object> properties, Map<Object, Integer> populations) {
+    public Map<String, Double> getValuePerCapita(ArrayList<Object> properties, Map<Object, Integer> populations) {
         Map<String, Double> valuePerCapita = new HashMap<>();
         Map<String, Double> valueByZip = new HashMap<>();
         Property tempP;

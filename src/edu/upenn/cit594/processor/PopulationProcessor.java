@@ -33,15 +33,23 @@ public class PopulationProcessor {
 		return populationByZip;
 
 	}
-	
-	public static void main(String[] args) {
-		TXTReader t = new TXTReader("population.txt");
-		ArrayList<Population> pList = t.open();
-		PopulationProcessor pp = new PopulationProcessor(pList);
-		Map<Object, Integer>  ppList = pp.getPopulationByZip();
-		for (Entry<Object, Integer> entry : ppList.entrySet()) {
-		    System.out.println(entry.getKey() + ":" + entry.getValue().toString());
+
+	public int getTotalPopulation(){
+		int totalPopulation = 0;
+		for (Population p : populationList){
+			totalPopulation += p.getPopulation();
 		}
+		return totalPopulation;
 	}
+	
+//	public static void main(String[] args) {
+//		TXTReader t = new TXTReader("population.txt");
+//		ArrayList<Population> pList = t.open();
+//		PopulationProcessor pp = new PopulationProcessor(pList);
+//		Map<Object, Integer>  ppList = pp.getPopulationByZip();
+//		for (Entry<Object, Integer> entry : ppList.entrySet()) {
+//		    System.out.println(entry.getKey() + ":" + entry.getValue().toString());
+//		}
+//	}
 
 }

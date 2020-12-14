@@ -1,6 +1,9 @@
 package edu.upenn.cit594.processor;
 
+import edu.upenn.cit594.data.Population;
 import edu.upenn.cit594.data.Property;
+import edu.upenn.cit594.datamanagement.CSVHReader;
+import edu.upenn.cit594.datamanagement.TXTReader;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -11,23 +14,31 @@ public class PropertyProcessor {
 
     ArrayList<Object> properties;
     Map<Object, Integer> populations;
-    String zip;
 
-    public PropertyProcessor(ArrayList<Object> properties, Map<Object, Integer> populations, String zip) {
-        this.zip = zip;
+    public PropertyProcessor(ArrayList<Object> properties, Map<Object, Integer> populations) {
+
         this.properties = properties;
         this.populations = populations;
     }
+    //3. Average Market Value
+    public int getAveValue(String zip){
+        AveValueCalculator aveCalculator = new AveValueCalculator();
+        return aveCalculator.getAverage(properties, zip);
 
-    public int GetAveValue(AverageCalculator aveCalculator){
+    }
 
-        return aveCalculator.GetAveValue(properties, zip);
+    //4. Average Total Livable Area
+    public int getAveArea( String zip){
+        AveAreaCalculator aveCalculator = new AveAreaCalculator();
+        return aveCalculator.getAverage(properties, zip);
 
     }
 
-    public Map<String, Double> GetValuePerCapita(PerCapitaCalculator perCapitaCalculator){
-
-        return perCapitaCalculator.GetValuePerCapita(properties, populations);
+    //5. Total Residential market Value Per Capita
+    public Map<String, Double> getValuePerCapita(){
+        ValuePerCapitaCalculator perCapitaCalculator = new ValuePerCapitaCalculator();
+        return perCapitaCalculator.getValuePerCapita(properties, populations);
 
     }
+
 }

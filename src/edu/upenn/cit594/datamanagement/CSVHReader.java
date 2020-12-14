@@ -27,11 +27,11 @@ public class CSVHReader {
 	 * 
 	 * @return the contents from the input csv file
 	 */
-	public ArrayList<Property> open() {
+	public ArrayList<Object> open() {
 		BufferedReader br = null;
 		String line = "";
 		//ArrayList<String> csv = new ArrayList<>();
-		ArrayList<Property> propertyList = new ArrayList<>();
+		ArrayList<Object> propertyList = new ArrayList<>();
 		
 		try {
 			br = new BufferedReader(new FileReader(filename));

@@ -20,9 +20,10 @@ public class ViolationProcessor {
         this.populations = populations;
     }
 
-    public Map<String, Double> GetFinePerCapita(PerCapitaCalculator perCapitaCalculator){
-
-        return perCapitaCalculator.GetValuePerCapita(violations,populations);
+    //2. Total fines per capita
+    public Map<String, Double> getFinePerCapita(){
+        FinePerCapitaCalculator perCapitaCalculator = new FinePerCapitaCalculator();
+        return perCapitaCalculator.getValuePerCapita(violations,populations);
     }
 
 

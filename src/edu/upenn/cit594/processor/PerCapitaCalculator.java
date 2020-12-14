@@ -8,6 +8,6 @@ import java.util.Map;
 
 public interface PerCapitaCalculator {
 
-    public Map<String, Double> GetValuePerCapita(ArrayList<Object> objList, Map<Object, Integer> populations);
+    public Map<String, Double> getValuePerCapita(ArrayList<Object> objList, Map<Object, Integer> populations);
 
 }

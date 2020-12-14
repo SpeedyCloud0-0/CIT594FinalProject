@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class AveAreaCalculator implements AverageCalculator{
 
-    public int GetAveValue(ArrayList<Object> properties, String zip){
+    public int getAverage(ArrayList<Object> properties, String zip){
         double totalArea = 0;
         int homes = 0;
         int averageArea;
