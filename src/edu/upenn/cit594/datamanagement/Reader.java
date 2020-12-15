@@ -1,5 +1,12 @@
 package edu.upenn.cit594.datamanagement;
+import java.util.ArrayList;
 
-public class Reader {
+interface Reader {
 
+	/**
+	 * Construct an interface with a strong file open function
+	 * 
+	 */
+	public ArrayList<Object> open();
+	
 }

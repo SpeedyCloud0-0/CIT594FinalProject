@@ -8,8 +8,6 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 import edu.upenn.cit594.data.Population;
-import edu.upenn.cit594.data.Property;
-import edu.upenn.cit594.data.Violation;
 import edu.upenn.cit594.datamanagement.CSVHReader;
 import edu.upenn.cit594.datamanagement.CSVReader;
 import edu.upenn.cit594.datamanagement.JParser;
@@ -69,7 +67,7 @@ public class Main {
 
         //Prepare population data
         TXTReader t = new TXTReader(populationFileName);
-        ArrayList<Population> pList = t.open();
+        ArrayList<Object> pList = t.open();
         l.log(String.format("%d %s", System.currentTimeMillis(),propertyFileName));
         PopulationProcessor pp = new PopulationProcessor(pList);
         Map<Object, Integer> ppList = pp.getPopulationByZip();
@@ -118,6 +116,7 @@ public class Main {
             String zip = "";
             PropertyProcessor ptp = null;
 
+            // If user want feature 3, 4, 5, ask for the zip code, then prepare the property processor
             if (action == 3 || action == 4 || action == 5){
                 System.out.println("Enter the zip code to calculate");
                 zip = s.nextLine();

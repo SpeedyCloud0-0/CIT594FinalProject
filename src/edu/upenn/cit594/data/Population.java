@@ -1,5 +1,8 @@
 package edu.upenn.cit594.data;
-
+/**
+ * This is the population object class
+ * It has two variables: zipcode and population number
+ */
 public class Population {
 
 	public String zip_code;

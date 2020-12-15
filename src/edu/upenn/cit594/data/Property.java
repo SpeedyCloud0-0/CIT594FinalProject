@@ -1,5 +1,9 @@
 package edu.upenn.cit594.data;
 
+/**
+ * This is the property object class
+ * It has three variables: zipcode, market value and livable area
+ */
 public class Property {
 
 	String market_value;

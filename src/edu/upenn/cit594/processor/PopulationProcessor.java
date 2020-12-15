@@ -4,24 +4,33 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.stream.Collectors;
-
 import edu.upenn.cit594.data.Population;
-import edu.upenn.cit594.datamanagement.TXTReader;
 
+/** This class is an processor that process the population data
+ *  there is one variable: populationList, which contains a list of population
+ *  there are two functions in this processor: getPopulationByZip and getTotalPopulation
+ */
 public class PopulationProcessor {
 
-	ArrayList<Population> populationList;
-	
-	public PopulationProcessor(ArrayList<Population> populationList) {
+	ArrayList<Object> populationList;
+
+	/**
+	 * Constructor of PopulationProcessor
+	 */
+	public PopulationProcessor(ArrayList<Object> populationList) {
 		this.populationList = populationList;
 	}
-	
+
+	/**
+	 * Get each zone's population by zip code
+	 *
+	 * @return a map of population number, zip code as key
+	 */
 	public Map<Object, Integer>  getPopulationByZip() {
 		List<Population> pList = new ArrayList<>(); 
 		for (int i=0; i < populationList.size(); i++) {
-			pList.add(populationList.get(i));
+			pList.add((Population) populationList.get(i));
 		}
 		 
 		Map<Object, Integer> populationByZip = new HashMap<>();
@@ -34,22 +43,16 @@ public class PopulationProcessor {
 
 	}
 
+	/**
+	 * @return total population of all zip code
+	 */
 	public int getTotalPopulation(){
 		int totalPopulation = 0;
-		for (Population p : populationList){
-			totalPopulation += p.getPopulation();
+		Population tempP;
+		for (int i = 0; i < populationList.size(); i++){
+			tempP = (Population)populationList.get(i);
+			totalPopulation += tempP.getPopulation();
 		}
 		return totalPopulation;
 	}
-	
-//	public static void main(String[] args) {
-//		TXTReader t = new TXTReader("population.txt");
-//		ArrayList<Population> pList = t.open();
-//		PopulationProcessor pp = new PopulationProcessor(pList);
-//		Map<Object, Integer>  ppList = pp.getPopulationByZip();
-//		for (Entry<Object, Integer> entry : ppList.entrySet()) {
-//		    System.out.println(entry.getKey() + ":" + entry.getValue().toString());
-//		}
-//	}
-
 }

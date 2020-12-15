@@ -1,9 +1,9 @@
 package edu.upenn.cit594.data;
 
-import java.util.ArrayList;
-
-import edu.upenn.cit594.datamanagement.JParser;
-
+/**
+ * This is the violation object class
+ * It has three variables: zipcode, fine and state
+ */
 public class Violation {
 
 	String fine;

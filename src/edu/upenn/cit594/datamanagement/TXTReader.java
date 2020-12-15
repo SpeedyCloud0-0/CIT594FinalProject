@@ -8,8 +8,7 @@ import java.util.ArrayList;
 
 import edu.upenn.cit594.data.Population;
 
-public class TXTReader{
-
+public class TXTReader implements Reader{
 	String filename;
 	
 	/**
@@ -27,9 +26,8 @@ public class TXTReader{
 	 * 
 	 * @return all population information from input files
 	 */
-	public ArrayList<Population> open() {
-		//ArrayList<String> words = new ArrayList<>();
-		ArrayList<Population> populationList = new ArrayList<>();
+	public ArrayList<Object> open() {
+		ArrayList<Object> populationList = new ArrayList<>();
         try{
         	Path path = Paths.get(filename);
     		String filename = path.toAbsolutePath().toString();
@@ -40,8 +38,7 @@ public class TXTReader{
             String p;
             int population;
             
-            while((line = buf.readLine()) != null){
-            	//words.add(line);  
+            while((line = buf.readLine()) != null){ 
             	resArray = line.split("\\s+");
             	if ((resArray[0] != null) && (resArray[0].length() >= 5) && (resArray[1] != null)) {
             		zipCode = resArray[0];
@@ -58,7 +55,9 @@ public class TXTReader{
             e.printStackTrace();
         }
     return populationList;
-    }	
+    }
+
+	
 	
 //	public static void main(String[] args) {
 //		TXTReader t = new TXTReader("population.txt");

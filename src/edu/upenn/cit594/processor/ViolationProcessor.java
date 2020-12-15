@@ -5,7 +5,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-
+/** This class is an processor that process the violation data
+ *  there is two variable: violations, which contains a list of violations
+ *  populations, which contains a map of zip -> population number
+ *  there are 1 functions in this processor: getFinePerCapita
+ */
 public class ViolationProcessor {
 
     ArrayList<Object> violations;

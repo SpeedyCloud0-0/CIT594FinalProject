@@ -14,7 +14,7 @@ import org.json.simple.parser.ParseException;
 import edu.upenn.cit594.data.Violation;
 
 
-public class JParser {
+public class JParser implements Reader {
 	
 	String filename;
 	
@@ -32,6 +32,7 @@ public class JParser {
 	 * 
 	 * @return all parking violation content from input json file
 	 */
+	@Override
 	public ArrayList<Object> open(){
 		ArrayList<HashMap> jsonMap = new ArrayList<>();
 		ArrayList<Object> violationList = new ArrayList<>();

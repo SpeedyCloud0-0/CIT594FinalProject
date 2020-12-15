@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import edu.upenn.cit594.data.Population;
 import edu.upenn.cit594.data.Violation;
 
-public class CSVReader {
+public class CSVReader implements Reader {
 
 	String filename;
 	
@@ -27,10 +27,10 @@ public class CSVReader {
 	 * 
 	 * @return the contents from the input csv file
 	 */
+	@Override
 	public ArrayList<Object> open() {
 		BufferedReader br = null;
 		String line = "";
-		//ArrayList<String> csv = new ArrayList<>();
 		ArrayList<Object> violationList = new ArrayList<>();
 		
 		try {
@@ -42,7 +42,6 @@ public class CSVReader {
 					String fine = resArray[1];
 					String state = resArray[4];
 	            	String zipCode = resArray[6];
-					//System.out.println("fine= " + fine + " , state=" + state + " , zipCode=" + zipCode);
 					if (zipCode.length() == 5) {
 						Violation violationFrame = new Violation(fine, zipCode, state);
 	        			violationList.add(violationFrame);

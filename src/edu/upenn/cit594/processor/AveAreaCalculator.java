@@ -1,11 +1,18 @@
 package edu.upenn.cit594.processor;
-
 import edu.upenn.cit594.data.Property;
-
 import java.util.ArrayList;
 
+/** This class is the calculator class that implements average calculator interface
+ *  It calculate the average livable area in a specified zip code zone
+ */
 public class AveAreaCalculator implements AverageCalculator{
 
+    /**
+     * Calculate the average value of the livable area
+     *
+     * @param properties, zip
+     * @return the average value of the livable area in this zip
+     */
     public int getAverage(ArrayList<Object> properties, String zip){
         double totalArea = 0;
         int homes = 0;

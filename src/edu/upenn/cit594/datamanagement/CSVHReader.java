@@ -9,12 +9,12 @@ import java.util.ArrayList;
 import edu.upenn.cit594.data.Property;
 import edu.upenn.cit594.data.Violation;
 
-public class CSVHReader {
+public class CSVHReader implements Reader {
 
 	String filename;
 	
 	/**
-	 * Construct a reader to read a csv file
+	 * Construct a reader to read a csv file with head
 	 * 
 	 * @param filename
 	 */
@@ -27,10 +27,10 @@ public class CSVHReader {
 	 * 
 	 * @return the contents from the input csv file
 	 */
+	@Override
 	public ArrayList<Object> open() {
 		BufferedReader br = null;
 		String line = "";
-		//ArrayList<String> csv = new ArrayList<>();
 		ArrayList<Object> propertyList = new ArrayList<>();
 		
 		try {

@@ -1,15 +1,14 @@
 package edu.upenn.cit594.processor;
 
-import edu.upenn.cit594.data.Population;
 import edu.upenn.cit594.data.Property;
-import edu.upenn.cit594.datamanagement.CSVHReader;
-import edu.upenn.cit594.datamanagement.TXTReader;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 
+/** This class is an processor that process the property data
+ *  there is two variable: properties, which contains a list of properties
+ *  populations, which contains a map of zip -> population number
+ *  there are 3 functions in this processor: getAveValue, getAveArea and getValuePerCapita
+ */
 public class PropertyProcessor {
 
     ArrayList<Object> properties;
