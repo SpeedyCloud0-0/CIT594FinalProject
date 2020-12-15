@@ -19,8 +19,8 @@ public class EvaluateZIPProcessor {
 
         ValuePerCapitaCalculator valueCalculator = new ValuePerCapitaCalculator();
         Map<String, Double> valuePerCapita = valueCalculator.getValuePerCapita(properties, populations);
-        FinePerCapitaCalculator fineCalculator = new FinePerCapitaCalculator();
-        Map<String, Double> finePerCapita = fineCalculator.getValuePerCapita(violations,populations);
+        ViolationProcessor violationProcessor = new ViolationProcessor(violations, populations);
+        Map<String, Double> finePerCapita = violationProcessor.getFinePerCapita();
         double bestRatio = 0.0;
         String bestZIP = "";
         for (String key : valuePerCapita.keySet()){
